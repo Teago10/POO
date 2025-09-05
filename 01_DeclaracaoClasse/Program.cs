@@ -56,9 +56,8 @@ namespace _01_DeclaracaoClasse
             Aluno aluno1 = new Aluno();
             aluno1.Codigo = 1;
             aluno1.Nome = "Thiago";
-             //inicializando o vetor com 4 posicoes
 
-            aluno1.LancarNota(0, 9.6);
+            aluno1.LancarNota(0, 9.6); //aluno1.LancarNota(1, 9.6); Professor fez assim. o 1 se refere ao trimestre
             aluno1.LancarNota(1, 8.0);
             aluno1.LancarNota(2, 9.5);
             aluno1.LancarNota(3, 10.0);
@@ -186,14 +185,15 @@ namespace _01_DeclaracaoClasse
         public string Mencao()
         {
            
-            if (CalcularMedia() >= 5)
-            {
-                return "Aprovado";
-            }
-            else
-            {
-                return "Reprovado";
-            }
+            //if (CalcularMedia() >= 5)
+            //{
+            //    return "Aprovado";
+            //}
+            //else
+            //{
+            //    return "Reprovado";
+            //}
+            return CalcularMedia() >= 5 ? "Aprovado" : "Reprovado"; //Operador Ternario
         }
 
     }
