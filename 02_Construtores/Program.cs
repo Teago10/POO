@@ -10,7 +10,7 @@ namespace _02_Construtores
     {
         static void Main(string[] args)
         {
-            Quadrado quadrado = new Quadrado();
+            Quadrado quadrado = new Quadrado(); // new instancia o objeto da classe
             quadrado.ImprimirArea();
 
             Quadrado quadrado2 = new Quadrado(10);
@@ -36,9 +36,11 @@ namespace _02_Construtores
 
         //Overload (Sobrecarga) de Construtor
         //Declarar mais de um construtor com a lista de argumentos diferentes
-        public Quadrado()
+        // Construtor não tem retorno
+        public Quadrado():this(5) // Quando não for passado nenhum valor, o lado será 5
         {
-            this.Lado = 5; 
+            //this.Lado = 5;  
+
         }
 
         //Construtor serve para instanciar o objeto e inicializar os atributos
