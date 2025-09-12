@@ -53,7 +53,7 @@ namespace _03_Propriedades
                 }
                 else if (operacao.ToUpper() == "E")
                 {
-                    Console.WriteLine($"Conta: {conta.getNumero()} Nome: {conta.getNome()} Saldo: {conta.getSaldo()}");
+                    Console.WriteLine($"Conta: {conta.getNumero()} Nome: {conta.getNome()} Saldo: {conta.getSaldo():c2}");
                     break;
                 }
                 else
