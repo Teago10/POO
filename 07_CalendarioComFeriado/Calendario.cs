@@ -55,7 +55,7 @@ namespace _07_CalendarioComFeriado
             //int[] diasFeriados = { };
             Feriado[] diasFeriados = RetornaFeriados(); // obtém os feriados do mês, chamando o método RetornaFeriados()
 
-            bool ehFeriado;
+            //bool ehFeriado;
 
             //impressão do calendário
             for (int semana = 0; semana < 6; semana++) // para cada semana
@@ -64,7 +64,7 @@ namespace _07_CalendarioComFeriado
                 {
                     if (calendario[semana, diaSemana] != 0) // se houver dia, imprime o dia 
                     {
-                        ehFeriado = false;
+                        /*ehFeriado = false;
                         for (int posicaoFeriado = 0; posicaoFeriado < diasFeriados.Length; posicaoFeriado++) // verifica se o dia é feriado
                         {
                             if (diasFeriados[posicaoFeriado] != null && diasFeriados[posicaoFeriado].Dia == calendario[semana, diaSemana]) // se for feriado
@@ -72,10 +72,11 @@ namespace _07_CalendarioComFeriado
                                 ehFeriado = true;
                                 break;
                             }
-                        }
+                        }*/
 
                         //if (diasFeriados.Contains(calendario[semana, diaSemana]) || diaSemana == 0) // se for feriado ou domingo, muda a cor para vermelho
-                        if (ehFeriado || diaSemana == 0) // se for feriado ou domingo, muda a cor para vermelho
+                        /*if (ehFeriado || diaSemana == 0)*/ // se for feriado ou domingo, muda a cor para vermelho
+                        if (diasFeriados.Any(feriado=>feriado != null && feriado.Dia == calendario[semana,diaSemana]) || diaSemana == 0) // se for feriado ou domingo, muda a cor para vermelho
                             Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t"); // imprime o dia com dois dígitos
