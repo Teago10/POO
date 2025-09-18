@@ -12,15 +12,17 @@ namespace _08_Aluno
         {
 
             Console.WriteLine("Digite o nome do aluno:");
-            string nome = Console.ReadLine();
+            //string nome = Console.ReadLine();
+            Aluno aluno = new Aluno(Console.ReadLine());
+
             Console.WriteLine("Digite a idade do aluno:");
-            int idade = int.Parse(Console.ReadLine());
+            aluno.Idade = int.Parse(Console.ReadLine()); // Lê a idade do aluno, jogando na variável idade em formato int
             Console.WriteLine("Digite a primeira nota do aluno:");
-            double nota1 = double.Parse(Console.ReadLine());
+            aluno.Nota1 = double.Parse(Console.ReadLine()); // Lê a primeira nota do aluno, jogando na variável nota1 em formato double
             Console.WriteLine("Digite a segunda nota do aluno:");
-            double nota2 = double.Parse(Console.ReadLine());
+            aluno.Nota2 = double.Parse(Console.ReadLine()); // Lê a segunda nota do aluno, jogando na variável nota2 em formato double
+
             
-            Aluno aluno = new Aluno(nome, idade, nota1, nota2);
             Console.WriteLine($"Nome: {aluno.Nome}");
             Console.WriteLine($"Idade: {aluno.Idade}");
             Console.WriteLine($"Nota 1: {aluno.Nota1}");

@@ -11,15 +11,10 @@ namespace _08_Aluno
         private string nome;
         private int idade;
         private double nota1, nota2;
-        private double media;
-        private string situacao;
 
-        public Aluno(string nome, int idade, double nota1, double nota2)
+        public Aluno(string nome)
         {
             this.nome = nome;
-            this.idade = idade;
-            this.nota1 = nota1;
-            this.nota2 = nota2;
         }
         public string Nome
         {
@@ -28,7 +23,12 @@ namespace _08_Aluno
         public int Idade
         {
             get { return idade; }
-            set { idade = value; }
+            set { 
+                if (value >= 0)
+                    idade = value;
+                else
+                    Console.WriteLine("Idade invalida");
+            }
         }
         public double Nota1
         {
@@ -42,9 +42,9 @@ namespace _08_Aluno
             set { nota2 = value; }
         }
 
-        public double Media
+        public double Media // média das notas
         {
-            get { return(nota1 + nota2)/ 2.0 ; }
+            get { return(nota1 + nota2)/ 2.0 ; } // get = retorna a média das notas
         }
 
         public string Situacao
