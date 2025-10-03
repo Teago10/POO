@@ -76,7 +76,7 @@ namespace _17_Calendario
 
                         //if (diasFeriados.Contains(calendario[semana, diaSemana]) || diaSemana == 0) // se for feriado ou domingo, muda a cor para vermelho
                         /*if (ehFeriado || diaSemana == 0)*/ // se for feriado ou domingo, muda a cor para vermelho
-                        if (diasFeriados.Any(feriado=>feriado != null && feriado.Dia == calendario[semana,diaSemana]) || diaSemana == 0) // se for feriado ou domingo, muda a cor para vermelho
+                        if (diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana, diaSemana]) || diaSemana == (int)DiaSemana.Domingo) // se for feriado ou domingo, muda a cor para vermelho
                             Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t"); // imprime o dia com dois dígitos
@@ -99,6 +99,9 @@ namespace _17_Calendario
                     Console.Write($"{diasFeriados[i].ToString("D2")}\t"); // imprime o dia com dois dígitos
                 }
             }*/
+
+            diasFeriados.Sort(); // ordena os feriados pelo dia
+
             foreach (Feriado diasFeriado in diasFeriados) // imprime os feriados
             {
                 if (diasFeriado != null) // se não for nulo, imprime o dia e a descrição
