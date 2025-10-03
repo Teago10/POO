@@ -15,7 +15,7 @@ namespace _08_ValidaCPF
             CPF numero = new CPF(cpf);
             bool valido = numero.Validar();
 
-            if (valido) 
+            if (valido)
             {
                 Console.WriteLine("CPF Válido!");
             }
@@ -23,9 +23,22 @@ namespace _08_ValidaCPF
             {
                 Console.WriteLine("CPF Inválido!");
             }
+
+            /*
+            Console.WriteLine("Informe o CPF");
+            CPF cpf = new CPF(Console.ReadLine());
+                             OU
+            IDocumento documento = new CPF(Console.ReadLine());
+
+            if(cpf.Validar())
+                Console.WriteLine("CPF válido")
+            else
+                Console.WriteLine("CPF inválido")
+             
+             */
         }
 
-        
+
 
     }
 }
