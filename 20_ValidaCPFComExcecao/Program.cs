@@ -50,7 +50,35 @@ namespace _20_ValidaCPFComExcecao
             {
                 Console.WriteLine("CPF Inválido!");
             }
-            
+
+            while (true) 
+            {
+                Console.WriteLine("Informe o CNPJ");
+
+                try
+                {
+                    documento = new CNPJ(Console.ReadLine());
+                    break;
+                }
+                catch (CNPJQtdeDigitosException ex)
+                {
+                    Console.WriteLine($"CNPJ Inválido! {ex.Message}");
+                }
+                catch (CNPJSequenciaException ex)
+                {
+                    Console.WriteLine($"CNPJ Inválido! {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"CNPJ Inválido! {ex.Message}");
+                }
+                finally
+                {
+                    Console.WriteLine("Pressione qualquer tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+
             /*
             Console.WriteLine("Informe o CPF");
             CPF cpf = new CPF(Console.ReadLine());

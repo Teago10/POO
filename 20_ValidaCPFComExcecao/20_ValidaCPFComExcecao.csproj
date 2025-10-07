@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CNPJQtdeDigitosException.cs" />
+    <Compile Include="CNPJSequenciaException.cs" />
     <Compile Include="CPF.cs" />
     <Compile Include="CPFMesmoNumeroException.cs" />
     <Compile Include="CPFQtdeDigitosException.cs" />
